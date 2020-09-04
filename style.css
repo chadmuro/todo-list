@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #999;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    min-height: 100vh;    
+    background-size: cover;
+    background-position: top;
+}
+
+input[type="text"],
+button {
+    outline: none;
+}
+
+
+/* HEADER */
+header {
+    font-size: 1.3rem;
+    flex-direction: column;
+}
+
+header h1 {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+header, 
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FORM */
+form input,
+form button {
+    padding: 0.5rem;
+    font-size: 1.8rem;
+    border: none;
+    background-color: #fff;
+}
+
+form button {
+    color: #333;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+form button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* TODO CONTAINER */
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .5s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.todo-item {
+    padding: 0 .5rem;
+    transform: translateX(-1.2rem);
+}
+
+.trash-btn, 
+.complete-btn,
+.star-btn {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn {
+    background-color: green;
+}
+
+
+.star-btn {
+    background-color: transparent;
+    color: #fff;
+    padding: 0;
+    transform: translateX(-1.5rem);
+}
+
+.star-yellow {
+    color: yellow;
+}
+
+
+
+
+.fa-trash,
+.fa-check,
+.fa-star {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+
+/* FILTER 
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+select {
+    color: #333;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background-color: #333;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background-color: white;
+    color: #333;
+}
+
+.filter-todo {
+    font-size: 1rem;
+}
+*/
