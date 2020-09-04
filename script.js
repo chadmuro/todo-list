@@ -3,9 +3,6 @@ const date = document.querySelector('.date');
 const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
-const starButton = document.querySelector('.star-btn');
-const completeButton = document.querySelector('.complete-btn');
-const trashButton = document.querySelector('.trash-btn');
 
 // UNSPLASH BACKGROUND
 const url = 'https://api.unsplash.com/photos/random?featured&client_id=';
@@ -37,8 +34,6 @@ date.textContent = today;
 let todos = [];
 let completes = [];
 let stars = [];
-
-
 
 // INIT
 function init(arr1, arr2, arr3) {
@@ -75,12 +70,12 @@ function init(arr1, arr2, arr3) {
     });
 }
 
+
 // EVENT LISTENERS
 document.addEventListener('DOMContentLoaded', getNewImage);
 document.addEventListener('DOMContentLoaded', getLocalStorage);
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
-
 
 
 // FUNCTIONS
@@ -132,9 +127,6 @@ function deleteCheck(e) {
         }   
         saveLocalStorage(stars, todos, completes);
     }
-
-
-
 
     // Complete Todo
     if (item.classList[0] === 'complete-btn') {
@@ -266,16 +258,12 @@ function deleteCheck(e) {
 }
 
 
-
-
-
+// LOCAL STORAGE FUNCTIONS
 function saveLocalStorage(star, todo, complete) {
     localStorage.setItem('stars', JSON.stringify(star));
     localStorage.setItem('todos', JSON.stringify(todo));
     localStorage.setItem('completes', JSON.stringify(complete));
 }
-
-
 
 function getLocalStorage() {
     stars = JSON.parse(localStorage.getItem('stars'));
@@ -284,29 +272,3 @@ function getLocalStorage() {
 
     init(stars, todos, completes);
 }
-
-
-
-/*
-//FILTER
-function filterTodo(e) {
-    todoItems.forEach(todo => {
-        console.log(todo);
-        if (e.target.value === 'all') {
-            todo.style.display = 'flex';
-        } else if (e.target.value === 'completed') {
-            if (todo.classList.contains('completed')) {
-                todo.style.display = 'flex';
-            } else {
-                todo.style.display = 'none';
-            }
-        } else if (e.target.value === 'uncompleted') {
-            if (todo.classList.contains('completed')) {
-                todo.style.display = 'none';
-            } else {
-                todo.style.display = 'flex';
-            }
-        }
-    });
-}
-*/
