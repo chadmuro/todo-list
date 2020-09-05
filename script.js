@@ -5,18 +5,18 @@ const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
 
 // UNSPLASH BACKGROUND
-const url = 'https://api.unsplash.com/photos/random?featured&client_id=';
-const mykey = config.MY_KEY;
+// const url = 'https://api.unsplash.com/photos/random?featured&client_id=';
+// const mykey = config.MY_KEY;
 
-const requestUrl= `${url}${mykey}`;
+// const requestUrl= `${url}${mykey}`;
 
-function getNewImage() {
-    return fetch(requestUrl)
-        .then(res => res.json())
-        .then(data => {
-            document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${data.urls.regular})`;
-        });
-}
+// function getNewImage() {
+//     return fetch(requestUrl)
+//         .then(res => res.json())
+//         .then(data => {
+//             document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${data.urls.regular})`;
+//         });
+// }
 
 // GET CURRENT DATE
 let objToday = new Date(),
@@ -72,7 +72,7 @@ function init(arr1, arr2, arr3) {
 
 
 // EVENT LISTENERS
-document.addEventListener('DOMContentLoaded', getNewImage);
+//document.addEventListener('DOMContentLoaded', getNewImage);
 document.addEventListener('DOMContentLoaded', getLocalStorage);
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
