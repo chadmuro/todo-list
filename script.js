@@ -72,7 +72,7 @@ function init(arr1, arr2, arr3) {
 
 
 // EVENT LISTENERS
-document.addEventListener('DOMContentLoaded', getNewImage);
+//document.addEventListener('DOMContentLoaded', getNewImage);
 document.addEventListener('DOMContentLoaded', getLocalStorage);
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
@@ -266,9 +266,9 @@ function saveLocalStorage(star, todo, complete) {
 }
 
 function getLocalStorage() {
-    stars = JSON.parse(localStorage.getItem('stars'));
-    todos = JSON.parse(localStorage.getItem('todos'));
-    completes = JSON.parse(localStorage.getItem('completes'));
+    stars = JSON.parse(localStorage.getItem('stars')) || [];
+    todos = JSON.parse(localStorage.getItem('todos')) || [];
+    completes = JSON.parse(localStorage.getItem('completes')) || [];
 
     init(stars, todos, completes);
 }
