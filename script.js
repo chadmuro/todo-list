@@ -72,7 +72,7 @@ function init(arr1, arr2, arr3) {
 
 
 // EVENT LISTENERS
-//document.addEventListener('DOMContentLoaded', getNewImage);
+document.addEventListener('DOMContentLoaded', getNewImage);
 document.addEventListener('DOMContentLoaded', getLocalStorage);
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
